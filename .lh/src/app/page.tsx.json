@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/page.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1694623698677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1694623698677,
+            "name": "Commit-0",
+            "content": "import Image from 'next/image'\n\nexport default function Home() {\n  return (\n    <main className=\"flex min-h-screen flex-col items-center justify-between p-24\">\n      \n    </main>\n  )\n}\n"
+        }
+    ]
+}
