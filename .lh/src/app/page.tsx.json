@@ -3,11 +3,71 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1694623698677,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1694643266966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from 'next/image'\n \n export default function Home() {\n   return (\n-    <main className=\"flex min-h-screen flex-col items-center justify-between p-24\">\n+    <main className=\"flex min-h-screen flex-col items-center justify-between bg-white p-24 flex-col\">\n       \n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1694643276622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from 'next/image'\n \n export default function Home() {\n   return (\n-    <main className=\"flex min-h-screen flex-col items-center justify-between bg-white p-24 flex-col\">\n+    <main className=\"flex min-h-screen items-center justify-between bg-white p-24 flex-col\">\n       \n     </main>\n   )\n }\n"
+                },
+                {
+                    "date": 1694651972040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from 'next/image'\n \n export default function Home() {\n   return (\n-    <main className=\"flex min-h-screen items-center justify-between bg-white p-24 flex-col\">\n-      \n-    </main>\n+    <div>\n+      <main></main>\n+    </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694652385567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Image from 'next/image'\n \n export default function Home() {\n   return (\n-    <div>\n+    <div className='relative'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694652641764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,9 @@\n import Image from 'next/image'\n+import { Inter } from 'next/font/google'\n \n+const inter = Inter({ subsets: ['latin'] })\n+\n export default function Home() {\n   return (\n     <div className='relative'>\n       <main></main>\n"
+                },
+                {
+                    "date": 1694652745357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative'>\n+    <div className='relative bg-red-200'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694652823051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative bg-red-200'>\n+    <div className='relative h-4 bg-red-200'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694653482374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative h-4 bg-red-200'>\n+    <div className='relative h-full bg-red-200'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694654444225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative h-full bg-red-200'>\n+    <div className='container'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694654473363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='container'>\n+    <div className='relative'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694654629142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative'>\n+    <div className='relative bg-red-200'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694654673795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative bg-red-200'>\n+    <div className='relative h-full bg-red-200'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694654991917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative h-full bg-red-200'>\n+    <div className='relative h-full bg-red-200 lg:h-[140vh]'>\n       <main></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694655217969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,8 @@\n \n export default function Home() {\n   return (\n     <div className='relative h-full bg-red-200 lg:h-[140vh]'>\n-      <main></main>\n+      <main className='relative pb-24 pl-4 lg:space-y-24 lg:pl-16'></main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1694655390556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n   return (\n-    <div className='relative h-full bg-red-200 lg:h-[140vh]'>\n+    <div className='relative h-full bg-black lg:h-[140vh]'>\n       <main className='relative pb-24 pl-4 lg:space-y-24 lg:pl-16'></main>\n     </div>\n   )\n }\n"
                 }
             ],
             "date": 1694623698677,
