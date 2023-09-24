@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1694651761060,
@@ -12,6 +12,10 @@
                 {
                     "date": 1694651969881,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n+\n+@layer base{\n+  body{\n+    @apply bg-[#141414] text-white\n+  }\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695527934815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,21 @@\n @tailwind base;\n @tailwind components;\n @tailwind utilities;\n \n-@layer base{\n-  body{\n-    @apply bg-[#141414] text-white\n+.bg-gradient-to-b {\n+  background-image: linear-gradient(\n\\ No newline at end of file\n+    to bottom,\n+    rgba(20, 20, 20, 0) 0,\n+    rgba(20, 20, 20, 0.15) 15%,\n+    rgba(20, 20, 20, 0.35) 29%,\n+    rgba(20, 20, 20, 0.58) 44%,\n+    #141414 68%,\n+    #141414 100%\n+  );\n+}\n+\n+@layer base {\n+  body {\n+    @apply bg-[#383838] text-white;\n   }\n-}\n+}\n"
                 }
             ],
             "date": 1694651761060,

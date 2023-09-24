@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/app/components/Header.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1695565836274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1695565856371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex '>Header</header>\n+  return <header className='fixed top-0 z-50 flex w-full'>Header</header>\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695565868453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full'>Header</header>\n+  return <header className='fixed top-0 z-50 flex w-full bg-red-500'>Header</header>\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695566168667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,16 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full bg-red-500'>Header</header>\n+  return <header className='fixed top-0 z-50 flex w-full bg-red-500'>\n+    <img\n+          src='https://rb.gy/ulxxee'\n+          alt='netflix'\n+          width={120}\n+          height={120}\n+        />\n+        <ul className='hidden md:flex md:space-x-4'>\n+          <li>Home</li>\n+          <li>TV Shows</li>\n+          <li>Movies</li>\n+          <li>Latest</li>\n+        </ul>\n+  </header>\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695566370957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full bg-red-500'>\n+  return <header className='fixed top-0 z-50 flex w-full bg-red-500 w-full'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695566389649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full bg-red-500 w-full'>\n+  return <header className='fixed top-0 z-50 flex w-full items-center bg-red-500'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695566420364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full items-center bg-red-500'>\n+  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-red-500'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695566620361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-red-500'>\n+  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695566683909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4'>\n+  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                }
+            ],
+            "date": 1695565836274,
+            "name": "Commit-0",
+            "content": "export default function Header(){\n  return <header className='fixed top-0 z-50 flex '>Header</header>\n}"
+        }
+    ]
+}
