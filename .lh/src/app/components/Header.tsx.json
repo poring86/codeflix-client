@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 8,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1695565836274,
@@ -40,6 +40,34 @@
                 {
                     "date": 1695566683909,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export default function Header(){\n-  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4'>\n+  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n     <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695567199404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,16 @@\n-export default function Header(){\n+export default function Header() {\n   return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n     <img\n-          src='https://rb.gy/ulxxee'\n-          alt='netflix'\n-          width={120}\n-          height={120}\n-        />\n-        <ul className='hidden md:flex md:space-x-4'>\n-          <li>Home</li>\n-          <li>TV Shows</li>\n-          <li>Movies</li>\n-          <li>Latest</li>\n-        </ul>\n+      src='https://rb.gy/ulxxee'\n+      alt='netflix'\n+      width={120}\n+      height={120}\n+    />\n+    <ul className='hidden md:flex md:space-x-4'>\n+      <li>Home</li>\n+      <li>TV Shows</li>\n+      <li>Movies</li>\n+      <li>Latest</li>\n+    </ul>\n   </header>\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695567212368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export default function Header() {\n-  return <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n+  return\n+  (<header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n     <img\n       src='https://rb.gy/ulxxee'\n       alt='netflix'\n       width={120}\n@@ -11,6 +12,6 @@\n       <li>TV Shows</li>\n       <li>Movies</li>\n       <li>Latest</li>\n     </ul>\n-  </header>\n+  </header>)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695567218382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n export default function Header() {\n-  return\n-  (<header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n-    <img\n-      src='https://rb.gy/ulxxee'\n-      alt='netflix'\n-      width={120}\n-      height={120}\n-    />\n-    <ul className='hidden md:flex md:space-x-4'>\n-      <li>Home</li>\n-      <li>TV Shows</li>\n-      <li>Movies</li>\n-      <li>Latest</li>\n-    </ul>\n-  </header>)\n+  return (\n+    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n+      <img\n+        src='https://rb.gy/ulxxee'\n+        alt='netflix'\n+        width={120}\n+        height={120}\n+      />\n+      <ul className='hidden md:flex md:space-x-4'>\n+        <li>Home</li>\n+        <li>TV Shows</li>\n+        <li>Movies</li>\n+        <li>Latest</li>\n+      </ul>\n+    </header>)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695567385944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,13 @@\n         alt='netflix'\n         width={120}\n         height={120}\n       />\n-      <ul className='hidden md:flex md:space-x-4'>\n+      <ul className='hidden md:flex md:space-x-4 space-x-2'>\n         <li>Home</li>\n         <li>TV Shows</li>\n         <li>Movies</li>\n         <li>Latest</li>\n       </ul>\n-    </header>)\n+    </header>\n+  )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695567490633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Header() {\n   return (\n-    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-blue-500 px-4 py-4 lg:px-10 lg:py-6'>\n+    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 lg:px-10 lg:py-6'>\n       <img\n         src='https://rb.gy/ulxxee'\n         alt='netflix'\n         width={120}\n"
+                },
+                {
+                    "date": 1695567896368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,20 @@\n export default function Header() {\n   return (\n     <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 lg:px-10 lg:py-6'>\n-      <img\n-        src='https://rb.gy/ulxxee'\n-        alt='netflix'\n-        width={120}\n-        height={120}\n-      />\n-      <ul className='hidden md:flex md:space-x-4 space-x-2'>\n-        <li>Home</li>\n-        <li>TV Shows</li>\n-        <li>Movies</li>\n-        <li>Latest</li>\n-      </ul>\n+      <div>\n+        <img\n+          src='https://rb.gy/ulxxee'\n+          alt='netflix'\n+          width={120}\n+          height={120}\n+        />\n+        <ul className='hidden md:flex md:space-x-4 space-x-2'>\n+          <li>Home</li>\n+          <li>TV Shows</li>\n+          <li>Movies</li>\n+          <li>Latest</li>\n+        </ul>\n+      </div>\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695568021063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Header() {\n   return (\n     <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 lg:px-10 lg:py-6'>\n-      <div>\n+      <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
                 }
             ],
             "date": 1695565836274,
