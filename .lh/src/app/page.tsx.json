@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 49,
+            "activePatchIndex": 58,
             "patches": [
                 {
                     "date": 1694623698677,
@@ -204,6 +204,42 @@
                 {
                     "date": 1695565655658,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n export default function Home() {\n   return (\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n-      {/* <Header /> */}\n+      <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>\n           <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>\n             <Image\n"
+                },
+                {
+                    "date": 1695605217577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,20 @@\n import { Inter } from 'next/font/google'\n import Image from 'next/image'\n import Header from './components/Header'\n+import { useEffect } from 'react'\n \n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n+  const [isScrolled, setIsScrolled] = useState(false)\n+\n+  useEffect(() => {\n+    const handleScroll = () => { }\n+\n+    window.addEventListener('scroll', handleScroll)\n+  })\n+\n   return (\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n@@ -18,10 +27,10 @@\n               className='h-[65vh] object-cover object-top lg:h-[95-vh]'\n             />\n           </div>\n \n-          \n \n+\n           <h1 className='text-2xl font-bold md:text-4xl lg:text-7xl'>\n             The Witcher\n           </h1>\n           <p className='text-shadow-md max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl'>\n@@ -31,11 +40,11 @@\n           <div className='flex space-x-3'>\n             <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>Play</button>\n             <button className='md:text-xl; flex cursor-pointer items-center gap-x-2 rounded bg-gray-600 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>More info</button>\n           </div>\n-          \n+\n         </div>\n-        \n+\n       </main>\n     </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1695605225350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { Inter } from 'next/font/google'\n import Image from 'next/image'\n import Header from './components/Header'\n-import { useEffect } from 'react'\n+import { useEffect, useState } from 'react'\n \n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n"
+                },
+                {
+                    "date": 1695605795604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n   useEffect(() => {\n     const handleScroll = () => { }\n \n     window.addEventListener('scroll', handleScroll)\n+\n+    return () => window.removeEventListener('scroll', handleScroll)\n   })\n \n   return (\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n"
+                },
+                {
+                    "date": 1695605821634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,11 @@\n     const handleScroll = () => { }\n \n     window.addEventListener('scroll', handleScroll)\n \n-    return () => window.removeEventListener('scroll', handleScroll)\n+    return () => {\n+      window.removeEventListener('scroll', handleScroll)\n+    }\n   })\n \n   return (\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n"
+                },
+                {
+                    "date": 1695606125464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,15 @@\n export default function Home() {\n   const [isScrolled, setIsScrolled] = useState(false)\n \n   useEffect(() => {\n-    const handleScroll = () => { }\n+    const handleScroll = () => {\n+      if (window.scrollY > 0) {\n+        setIsScrolled(true)\n+      } else {\n+        setIsScrolled(false)\n+      }\n+    }\n \n     window.addEventListener('scroll', handleScroll)\n \n     return () => {\n"
+                },
+                {
+                    "date": 1695606235369,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     }\n   })\n \n   return (\n-    <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n+    <div className=`${isScrolled && 'bg-black'} relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]` >\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>\n           <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>\n@@ -54,7 +54,7 @@\n \n         </div>\n \n       </main>\n-    </div>\n+    </div >\n   )\n }\n"
+                },
+                {
+                    "date": 1695606260223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     }\n   })\n \n   return (\n-    <div className=`${isScrolled && 'bg-black'} relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]` >\n+    <div className={`${isScrolled && 'bg-black'} relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]`}>\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>\n           <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>\n"
+                },
+                {
+                    "date": 1695606736784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,13 @@\n import { Inter } from 'next/font/google'\n import Image from 'next/image'\n import Header from './components/Header'\n-import { useEffect, useState } from 'react'\n \n const inter = Inter({ subsets: ['latin'] })\n \n export default function Home() {\n-  const [isScrolled, setIsScrolled] = useState(false)\n-\n-  useEffect(() => {\n-    const handleScroll = () => {\n-      if (window.scrollY > 0) {\n-        setIsScrolled(true)\n-      } else {\n-        setIsScrolled(false)\n-      }\n-    }\n-\n-    window.addEventListener('scroll', handleScroll)\n-\n-    return () => {\n-      window.removeEventListener('scroll', handleScroll)\n-    }\n-  })\n-\n   return (\n-    <div className={`${isScrolled && 'bg-black'} relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]`}>\n+    <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>\n           <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>\n@@ -54,7 +35,7 @@\n \n         </div>\n \n       </main>\n-    </div >\n+    </div>\n   )\n }\n"
+                },
+                {
+                    "date": 1695606935041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <div className='flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>\n-          <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col bg-black'>\n+          <div className='absolute left-0 top-0 -z-10 flex h-[95vh] w-screen flex-col'>\n             <Image\n               src='/banner2.jpg'\n               alt='The Witcher'\n               fill={true}\n"
                 }
             ],
             "date": 1694623698677,

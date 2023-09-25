@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1695565836274,
@@ -100,6 +100,22 @@
                 {
                     "date": 1695600654035,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,15 +14,15 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <div className=\"flex items-center space-x-4\">\n-        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n-          Tests\n-        </button>\n-        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n-          Tests\n-        </button>\n+      <div className='flex items-center space-x-4'>\n+        <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+        <img\n+          src='https://rb.gy/g1pwyx'\n+          alt=''\n+          className='cursor-pointer rounded'\n+        />\n       </div>\n \n     </header>\n   )\n"
+                },
+                {
+                    "date": 1695606630024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,24 @@\n+import { useEffect, useState } from \"react\"\n+\n export default function Header() {\n+  const [isScrolled, setIsScrolled] = useState(false)\n+\n+  useEffect(() => {\n+    const handleScroll = () => {\n+      if (window.scrollY > 0) {\n+        setIsScrolled(true)\n+      } else {\n+        setIsScrolled(false)\n+      }\n+    }\n+\n+    window.addEventListener('scroll', handleScroll)\n+\n+    return () => {\n+      window.removeEventListener('scroll', handleScroll)\n+    }\n+  })\n   return (\n     <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6'>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n"
+                },
+                {
+                    "date": 1695606770303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n   return (\n-    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6'>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n"
+                },
+                {
+                    "date": 1695606813026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+'use client'\n import { useEffect, useState } from \"react\"\n \n export default function Header() {\n   const [isScrolled, setIsScrolled] = useState(false)\n"
+                },
+                {
+                    "date": 1695607001449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-betweenpx-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n"
                 }
             ],
             "date": 1695565836274,
