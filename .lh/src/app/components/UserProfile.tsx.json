@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/components/UserProfile.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695663946139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695663946139,
+            "name": "Commit-0",
+            "content": "'use client';\nimport Image from \"next/image\";\n\nexport const UserProfile = () => (\n  <div className='flex items-center space-x-4'>\n    <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n    <Image\n      src='/profile.png'\n      alt='profile'\n      width={40}\n      height={40}\n      className=\"cursor-pointer rounded-full\" />\n  </div>\n);\n"
+        }
+    ]
+}

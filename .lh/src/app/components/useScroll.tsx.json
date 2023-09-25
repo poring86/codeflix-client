@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/app/components/useScroll.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1695665738558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1695665738558,
+            "name": "Commit-0",
+            "content": "'use client';\nimport { useEffect, useState } from \"react\";\n\nexport const useScroll = () => {\n  const [isScrolled, setIsScrolled] = useState(false);\n\n  useEffect(() => {\n    const handleScroll = () => {\n      if (window.scrollY > 0) {\n        setIsScrolled(true);\n      } else {\n        setIsScrolled(false);\n      }\n    };\n\n    window.addEventListener('scroll', handleScroll);\n\n    return () => {\n      window.removeEventListener('scroll', handleScroll);\n    };\n  });\n\n  return isScrolled;\n};\n"
+        }
+    ]
+}

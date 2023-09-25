@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 27,
+            "activePatchIndex": 50,
             "patches": [
                 {
                     "date": 1695565836274,
@@ -116,6 +116,98 @@
                 {
                     "date": 1695607001449,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-betweenpx-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n"
+                },
+                {
+                    "date": 1695648770269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,32 +18,47 @@\n     return () => {\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n+\n+  const Logo = () => (\n+    <img\n+      src='https://rb.gy/ulxxee'\n+      alt='netflix'\n+      width={120}\n+      height={120}\n+    />\n+  )\n+\n+  const UserProfile = () => (\n+    <div className='flex items-center space-x-4'>\n+      <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+      <img\n+        src='https://rb.gy/g1pwyx'\n+        alt=''\n+        className='cursor-pointer rounded'\n+      />\n+    </div>\n+  )\n+\n+  const NavLinks = () => (\n+    <div className='flex items-center space-x-4'>\n+      <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+      <img\n+        src='https://rb.gy/g1pwyx'\n+        alt=''\n+        className='cursor-pointer rounded'\n+      />\n+    </div>\n+  )\n+\n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-betweenpx-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n-        <img\n-          src='https://rb.gy/ulxxee'\n-          alt='netflix'\n-          width={120}\n-          height={120}\n-        />\n-        <ul className='hidden md:flex md:space-x-4 space-x-2'>\n-          <li>Home</li>\n-          <li>TV Shows</li>\n-          <li>Movies</li>\n-          <li>Latest</li>\n-        </ul>\n+        <Logo />\n+        <NavLinks />\n       </div>\n-      <div className='flex items-center space-x-4'>\n-        <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n-        <img\n-          src='https://rb.gy/g1pwyx'\n-          alt=''\n-          className='cursor-pointer rounded'\n-        />\n-      </div>\n+      <UserProfile />\n \n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695648826594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,38 @@\n 'use client'\n import { useEffect, useState } from \"react\"\n \n+const Logo = () => (\n+  <img\n+    src='https://rb.gy/ulxxee'\n+    alt='netflix'\n+    width={120}\n+    height={120}\n+  />\n+)\n+\n+const UserProfile = () => (\n+  <div className='flex items-center space-x-4'>\n+    <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+    <img\n+      src='https://rb.gy/g1pwyx'\n+      alt=''\n+      className='cursor-pointer rounded'\n+    />\n+  </div>\n+)\n+\n+const NavLinks = () => (\n+  <div className='flex items-center space-x-4'>\n+    <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+    <img\n+      src='https://rb.gy/g1pwyx'\n+      alt=''\n+      className='cursor-pointer rounded'\n+    />\n+  </div>\n+)\n+\n export default function Header() {\n   const [isScrolled, setIsScrolled] = useState(false)\n \n   useEffect(() => {\n@@ -19,39 +50,10 @@\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n \n-  const Logo = () => (\n-    <img\n-      src='https://rb.gy/ulxxee'\n-      alt='netflix'\n-      width={120}\n-      height={120}\n-    />\n-  )\n \n-  const UserProfile = () => (\n-    <div className='flex items-center space-x-4'>\n-      <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n-      <img\n-        src='https://rb.gy/g1pwyx'\n-        alt=''\n-        className='cursor-pointer rounded'\n-      />\n-    </div>\n-  )\n \n-  const NavLinks = () => (\n-    <div className='flex items-center space-x-4'>\n-      <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n-      <img\n-        src='https://rb.gy/g1pwyx'\n-        alt=''\n-        className='cursor-pointer rounded'\n-      />\n-    </div>\n-  )\n-\n   return (\n     <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n"
+                },
+                {
+                    "date": 1695649122764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,7 @@\n         <Logo />\n         <NavLinks />\n       </div>\n       <UserProfile />\n-\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695649160599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,16 +21,14 @@\n   </div>\n )\n \n const NavLinks = () => (\n-  <div className='flex items-center space-x-4'>\n-    <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n-    <img\n-      src='https://rb.gy/g1pwyx'\n-      alt=''\n-      className='cursor-pointer rounded'\n-    />\n-  </div>\n+  <ul className='hidden md:flex md:space-x-4'>\n+    <li>Home</li>\n+    <li>TV Shows</li>\n+    <li>Movies</li>\n+    <li>Latest</li>\n+  </ul>\n )\n \n export default function Header() {\n   const [isScrolled, setIsScrolled] = useState(false)\n"
+                },
+                {
+                    "date": 1695656665817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n 'use client'\n+import Image from \"next/image\"\n import { useEffect, useState } from \"react\"\n \n const Logo = () => (\n   <img\n@@ -12,8 +13,14 @@\n \n const UserProfile = () => (\n   <div className='flex items-center space-x-4'>\n     <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+    <Image\n+      src='/profile.png'\n+      alt='profile'\n+      width={40}\n+      className=\"cursor-pointer rounded-full\"\n+    />\n     <img\n       src='https://rb.gy/g1pwyx'\n       alt=''\n       className='cursor-pointer rounded'\n"
+                },
+                {
+                    "date": 1695656701488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const UserProfile = () => (\n   <div className='flex items-center space-x-4'>\n     <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n     <Image\n-      src='/profile.png'\n+      src='https://rb.gy/g1pwyx'\n       alt='profile'\n       width={40}\n       className=\"cursor-pointer rounded-full\"\n     />\n"
+                },
+                {
+                    "date": 1695656718251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n     <Image\n       src='https://rb.gy/g1pwyx'\n       alt='profile'\n       width={40}\n+      height={40}\n       className=\"cursor-pointer rounded-full\"\n     />\n     <img\n       src='https://rb.gy/g1pwyx'\n"
+                },
+                {
+                    "date": 1695663397327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useEffect, useState } from \"react\"\n \n const Logo = () => (\n   <img\n-    src='https://rb.gy/ulxxee'\n+    src='/logo.svg'\n     alt='netflix'\n     width={120}\n     height={120}\n   />\n"
+                },
+                {
+                    "date": 1695663427570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { useEffect, useState } from \"react\"\n \n const Logo = () => (\n   <img\n-    src='/logo.svg'\n+    src='./logo.svg'\n     alt='netflix'\n     width={120}\n     height={120}\n   />\n"
+                },
+                {
+                    "date": 1695663485229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,14 +2,14 @@\n import Image from \"next/image\"\n import { useEffect, useState } from \"react\"\n \n const Logo = () => (\n-  <img\n-    src='./logo.svg'\n-    alt='netflix'\n-    width={120}\n-    height={120}\n-  />\n+  <Image\n+    src='/logo.svg'\n+    alt='Logo'\n+    width={90}\n+    height={90}\n+    className='cursor-pointer' />\n )\n \n const UserProfile = () => (\n   <div className='flex items-center space-x-4'>\n"
+                },
+                {
+                    "date": 1695663512043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,12 +60,12 @@\n \n \n   return (\n     <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n-      <div className=\"flex items-center space-x-2 md:space-x-8\">\n+      {/* <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n-      <UserProfile />\n+      <UserProfile /> */}\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695663522866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -60,12 +60,12 @@\n \n \n   return (\n     <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n-      {/* <div className=\"flex items-center space-x-2 md:space-x-8\">\n+      <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n-      <UserProfile /> */}\n+      {/* <UserProfile /> */}\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695663541121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n const UserProfile = () => (\n   <div className='flex items-center space-x-4'>\n     <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n     <Image\n-      src='https://rb.gy/g1pwyx'\n+      src='/profile.png'\n       alt='profile'\n       width={40}\n       height={40}\n       className=\"cursor-pointer rounded-full\"\n"
+                },
+                {
+                    "date": 1695663551771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,8 +64,8 @@\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n-      {/* <UserProfile /> */}\n+      <UserProfile />\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695663559074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,8 @@\n       width={40}\n       height={40}\n       className=\"cursor-pointer rounded-full\"\n     />\n-    <img\n-      src='https://rb.gy/g1pwyx'\n-      alt=''\n-      className='cursor-pointer rounded'\n-    />\n   </div>\n )\n \n const NavLinks = () => (\n"
+                },
+                {
+                    "date": 1695663946134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n 'use client'\n import Image from \"next/image\"\n import { useEffect, useState } from \"react\"\n+import { UserProfile } from \"./UserProfile\"\n \n const Logo = () => (\n   <Image\n     src='/logo.svg'\n@@ -10,21 +11,8 @@\n     height={90}\n     className='cursor-pointer' />\n )\n \n-const UserProfile = () => (\n-  <div className='flex items-center space-x-4'>\n-    <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n-    <Image\n-      src='/profile.png'\n-      alt='profile'\n-      width={40}\n-      height={40}\n-      className=\"cursor-pointer rounded-full\"\n-    />\n-  </div>\n-)\n-\n const NavLinks = () => (\n   <ul className='hidden md:flex md:space-x-4'>\n     <li>Home</li>\n     <li>TV Shows</li>\n"
+                },
+                {
+                    "date": 1695665454032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,9 @@\n 'use client'\n-import Image from \"next/image\"\n import { useEffect, useState } from \"react\"\n import { UserProfile } from \"./UserProfile\"\n+import { Logo } from \"./Logo\"\n \n-const Logo = () => (\n-  <Image\n-    src='/logo.svg'\n-    alt='Logo'\n-    width={90}\n-    height={90}\n-    className='cursor-pointer' />\n-)\n-\n const NavLinks = () => (\n   <ul className='hidden md:flex md:space-x-4'>\n     <li>Home</li>\n     <li>TV Shows</li>\n"
+                },
+                {
+                    "date": 1695665464094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,10 @@\n 'use client'\n import { useEffect, useState } from \"react\"\n import { UserProfile } from \"./UserProfile\"\n import { Logo } from \"./Logo\"\n+import { NavLinks } from \"./NavLinks\"\n \n-const NavLinks = () => (\n-  <ul className='hidden md:flex md:space-x-4'>\n-    <li>Home</li>\n-    <li>TV Shows</li>\n-    <li>Movies</li>\n-    <li>Latest</li>\n-  </ul>\n-)\n-\n export default function Header() {\n   const [isScrolled, setIsScrolled] = useState(false)\n \n   useEffect(() => {\n"
+                },
+                {
+                    "date": 1695665638296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { UserProfile } from \"./UserProfile\"\n import { Logo } from \"./Logo\"\n import { NavLinks } from \"./NavLinks\"\n \n-export default function Header() {\n+const useScroll = () => {\n   const [isScrolled, setIsScrolled] = useState(false)\n \n   useEffect(() => {\n     const handleScroll = () => {\n@@ -21,11 +21,15 @@\n     return () => {\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n+}\n \n+export default function Header() {\n \n \n+\n+\n   return (\n     <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n"
+                },
+                {
+                    "date": 1695665727965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,17 +21,19 @@\n     return () => {\n       window.removeEventListener('scroll', handleScroll)\n     }\n   })\n+\n+  return isScrolled\n }\n \n export default function Header() {\n \n \n \n \n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${useScroll() && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n"
+                },
+                {
+                    "date": 1695665738663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,10 @@\n 'use client'\n-import { useEffect, useState } from \"react\"\n import { UserProfile } from \"./UserProfile\"\n import { Logo } from \"./Logo\"\n import { NavLinks } from \"./NavLinks\"\n+import { useScroll } from \"./useScroll\"\n \n-const useScroll = () => {\n-  const [isScrolled, setIsScrolled] = useState(false)\n-\n-  useEffect(() => {\n-    const handleScroll = () => {\n-      if (window.scrollY > 0) {\n-        setIsScrolled(true)\n-      } else {\n-        setIsScrolled(false)\n-      }\n-    }\n-\n-    window.addEventListener('scroll', handleScroll)\n-\n-    return () => {\n-      window.removeEventListener('scroll', handleScroll)\n-    }\n-  })\n-\n-  return isScrolled\n-}\n-\n export default function Header() {\n \n \n \n"
+                },
+                {
+                    "date": 1695665777562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,8 @@\n import { NavLinks } from \"./NavLinks\"\n import { useScroll } from \"./useScroll\"\n \n export default function Header() {\n-\n-\n-\n-\n   return (\n     <header className={`${useScroll() && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n"
+                },
+                {
+                    "date": 1695665801336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n import { NavLinks } from \"./NavLinks\"\n import { useScroll } from \"./useScroll\"\n \n export default function Header() {\n+  const isScrolled = useScroll()\n   return (\n-    <header className={`${useScroll() && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n"
                 }
             ],
             "date": 1695565836274,
