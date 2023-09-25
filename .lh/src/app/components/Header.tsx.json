@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1695565836274,
@@ -68,6 +68,38 @@
                 {
                     "date": 1695568021063,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Header() {\n   return (\n     <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 lg:px-10 lg:py-6'>\n-      <div>\n+      <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n           width={120}\n"
+                },
+                {
+                    "date": 1695597961412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,10 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n+      <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n+        Tests\n+      </button>\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695598302345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n+      <button className=\"flex items-center space-x-2 md:space-x-8\">\n         Tests\n       </button>\n     </header>\n   )\n"
+                },
+                {
+                    "date": 1695598337758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <button className=\"flex items-center space-x-2 md:space-x-8\">\n+      <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n         Tests\n       </button>\n     </header>\n   )\n"
+                },
+                {
+                    "date": 1695598361230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,16 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n-        Tests\n-      </button>\n+      <div className=\"flex items-center space-x-2 md:space-x-8\">\n+        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n+          Tests\n+        </button>\n+        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n+          Tests\n+        </button>\n+      </div>\n+\n     </header>\n   )\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1695598390264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <div className=\"flex items-center space-x-2 md:space-x-8\">\n+      <div className=\"flex items-center space-x-4 md:space-x-8\">\n         <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n           Tests\n         </button>\n         <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n"
+                },
+                {
+                    "date": 1695598410381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <div className=\"flex items-center space-x-4 md:space-x-8\">\n+      <div className=\"flex items-center space-x-4\">\n         <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n           Tests\n         </button>\n         <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n"
+                },
+                {
+                    "date": 1695599571606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Header() {\n   return (\n-    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 lg:px-10 lg:py-6'>\n+    <header className='fixed top-0 z-50 flex w-full items-center justify-between bg-black px-4 py-4 transition-all lg:px-10 lg:py-6'>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <img\n           src='https://rb.gy/ulxxee'\n           alt='netflix'\n"
+                },
+                {
+                    "date": 1695600654035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,15 +14,15 @@\n           <li>Movies</li>\n           <li>Latest</li>\n         </ul>\n       </div>\n-      <div className=\"flex items-center space-x-4\">\n-        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n-          Tests\n-        </button>\n-        <button className=\"flex items-center space-x-2 bg-white px-4 py-2 rounded text-black text-sm font-semibold\">\n-          Tests\n-        </button>\n+      <div className='flex items-center space-x-4'>\n+        <p className='hidden cursor-not-allowed lg:inline'>Kids</p>\n+        <img\n+          src='https://rb.gy/g1pwyx'\n+          alt=''\n+          className='cursor-pointer rounded'\n+        />\n       </div>\n \n     </header>\n   )\n"
                 }
             ],
             "date": 1695565836274,
