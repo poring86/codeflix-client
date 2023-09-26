@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 51,
+            "activePatchIndex": 53,
             "patches": [
                 {
                     "date": 1695565836274,
@@ -212,6 +212,14 @@
                 {
                     "date": 1695679100896,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n 'use client'\n import { UserProfile } from \"./UserProfile\"\n import { Logo } from \"./Logo\"\n import { NavLinks } from \"./NavLinks\"\n-import { useScroll } from \"./useScroll\"\n+import { useScroll } from \"../hooks/useScroll\"\n \n export default function Header() {\n   const isScrolled = useScroll()\n   return (\n"
+                },
+                {
+                    "date": 1695694390138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n export default function Header() {\n   const isScrolled = useScroll()\n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-6`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-16`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n"
+                },
+                {
+                    "date": 1695694409881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n export default function Header() {\n   const isScrolled = useScroll()\n   return (\n-    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-10 lg:py-16`}>\n+    <header className={`${isScrolled && 'bg-black'} fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all lg:px-16 lg:py-4`}>\n       <div className=\"flex items-center space-x-2 md:space-x-8\">\n         <Logo />\n         <NavLinks />\n       </div>\n"
                 }
             ],
             "date": 1695565836274,
