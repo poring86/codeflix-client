@@ -1,6 +1,6 @@
 'use client'
 
-import { InputField } from "../InputField";
+import { InputField } from "../../components/InputField";
 
 export function ForgotPasswordForm() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {

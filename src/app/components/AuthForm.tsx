@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react"
-import { InputField } from "../auth/InputField"
+import { InputField } from "./InputField"
 
 type AuthFormProps = {
   formType: 'login' | 'register' | 'forgotPassword'
