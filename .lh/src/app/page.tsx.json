@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 97,
+            "activePatchIndex": 99,
             "patches": [
                 {
                     "date": 1694623698677,
@@ -396,6 +396,14 @@
                 {
                     "date": 1701730167049,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import { Inter } from 'next/font/google'\n import Header from './components/Header'\n import { MovieRow } from './components/MovieRow'\n import { Banner } from './components/Banner'\n import { getFeaturedMovie } from './service/MovieService'\n"
+                },
+                {
+                    "date": 1701733321744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,32 @@\n import Header from './components/Header'\n import { MovieRow } from './components/MovieRow'\n import { Banner } from './components/Banner'\n-import { getFeaturedMovie } from './service/MovieService'\n+import { getFeaturedMovie, getMoviesByGenre } from './service/MovieService'\n \n \n export default async function Home() {\n   const featuredMovie = await getFeaturedMovie('106');\n+  const genres = ['Drama', 'Action', 'Comedy', 'Animation'];\n+\n+  const movies = await Promise.all(\n+    genres.map(async (genre) => {\n+      const movies = await getMoviesByGenre(genre, { _limit: 8 });\n+      return { sectionTitle: genre, movies };\n+    })\n+  );\n   return (\n     <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n       <Header />\n       <main className='relative pb-24 pl-4 lg:pl-16'>\n         <Banner movie={featuredMovie} />\n-\n-        <MovieRow sectionTitle='Popular' />\n-        <MovieRow sectionTitle='Trending' />\n-        <MovieRow sectionTitle='Top Rated' />\n+        {movies.map((movie) => (\n+          <MovieRow\n+            movies={movie.movies}\n+            key={movie.sectionTitle}\n+            sectionTitle={movie.sectionTitle}\n+          />\n+        ))}\n       </main>\n     </div>\n   )\n \n"
+                },
+                {
+                    "date": 1701734722442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,11 @@\n       return { sectionTitle: genre, movies };\n     })\n   );\n   return (\n-    <div className='relative h-screen overflow-hidden bg-gradient-to-b lg:h-[140vh]'>\n+    <div className='relative bg-gradient-to-b pb-8'>\n       <Header />\n-      <main className='relative pb-24 pl-4 lg:pl-16'>\n+      <main className='relative overflow-y-scroll p-8 pb-20 scrollbar-hide lg:px-16 '>\n         <Banner movie={featuredMovie} />\n         {movies.map((movie) => (\n           <MovieRow\n             movies={movie.movies}\n"
                 }
             ],
             "date": 1694623698677,
