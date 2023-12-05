@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1695678072627,
@@ -16,6 +16,10 @@
                 {
                     "date": 1701726250778,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     \"build\": \"next build\",\n     \"start\": \"next start\",\n     \"lint\": \"next lint\",\n     \"test\": \"jest --watch\",\n-    \"json-server\": \"json-server --watch db.json\"\n+    \"json-server\": \"json-server --watch db.json -p 3333\"\n   },\n   \"dependencies\": {\n     \"@heroicons/react\": \"^2.0.18\",\n     \"@types/node\": \"20.6.0\",\n"
+                },
+                {
+                    "date": 1701742291407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n     \"json-server\": \"json-server --watch db.json -p 3333\"\n   },\n   \"dependencies\": {\n     \"@heroicons/react\": \"^2.0.18\",\n+    \"@vidstack/react\": \"^1.5.1\",\n     \"@types/node\": \"20.6.0\",\n     \"@types/react\": \"18.2.21\",\n     \"@types/react-dom\": \"18.2.7\",\n     \"autoprefixer\": \"10.4.15\",\n"
                 }
             ],
             "date": 1695678072627,
