@@ -12,7 +12,7 @@ export default async function Player({ movie }: Props) {
   return (
     <div className='flex h-screen justify-center align-middle'>
       <MediaPlayer
-        controls={true}
+        controls
         title={movie.title}
         src={movie.videoFileURL}
         className='ring-media-focus  aspect-video w-full rounded-md bg-black '
